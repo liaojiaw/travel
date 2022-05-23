@@ -1,0 +1,28 @@
+## master 数据源配置
+master:
+  datasource:
+    url: jdbc:mysql://39.103.196.2:3306/xmairtravel_reserve?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    username: root
+    password: root
+    driverClassName: com.mysql.cj.jdbc.Driver
+
+  ## slave 数据源配置
+slave:
+  datasource:
+    url: jdbc:mysql://39.103.196.2:3306/xmairtravel_reserve?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    username: root
+    password: root
+    driverClassName: com.mysql.cj.jdbc.Driver
+
+
+#热部署
+spring:
+  redis:
+    host: 39.103.196.2
+  http:
+    encoding:
+      force: true
+      charset: UTF-8
+  devtools:
+    restart:
+      enabled: true

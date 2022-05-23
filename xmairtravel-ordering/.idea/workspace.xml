@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="60dca217-9318-4642-ac76-9864a9164b37" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="E:\maven\apache-maven-3.6.3\repository" />
+        <option name="userSettingsFile" value="E:\maven\apache-maven-3.6.3\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="27ogfyi1cqwpSE09KFk0FlIE2p4" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../xmairtravel-core" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\xmairtravel-core\src\main\resources\mapper\master" />
+      <recent name="F:\xmairtravel-api\src\main\resources" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.xmairtravel.core.utils" />
+      <recent name="com.xmairtravel.manager.api" />
+      <recent name="com.xmairtravel.core.exception" />
+      <recent name="com.xmairtravel.core.entity.dto" />
+      <recent name="com.xmairtravel.core.entity.vo.in" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\xmairtravel-manager-api\src\main\java\com\xmairtravel\manager\api\config" />
+      <recent name="F:\xmairtravel-manager-api\src\main\java\com\xmairtravel\manager\api\version" />
+      <recent name="F:\xmairtravel-manager-api\src\main\resources" />
+      <recent name="F:\xmairtravel-wechat-api\src\main\java\com\xmairtravel\api\version" />
+      <recent name="F:\xmairtravel-core\src\main\java\com\xmairtravel\core\config\spring" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="xmairtravel-wechat-api" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="xmairtravel-wechat-api" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="XmairTravelManagerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="xmairtravel-manager-api" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.xmairtravel.manager.api.XmairTravelManagerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="XmairTravelWechatApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="xmairtravel-wechat-api" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.xmairtravel.wechat.api.XmairTravelWechatApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Spring Boot.XmairTravelManagerApplication" />
+      <item itemvalue="Spring Boot.XmairTravelWechatApplication" />
+    </list>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="60dca217-9318-4642-ac76-9864a9164b37" name="Default Changelist" comment="" />
+      <created>1649991959428</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1649991959428</updated>
+      <workItem from="1649991961111" duration="2007000" />
+      <workItem from="1650242700438" duration="12763000" />
+      <workItem from="1650328940764" duration="11172000" />
+      <workItem from="1650415216932" duration="710000" />
+      <workItem from="1650505363347" duration="2792000" />
+      <workItem from="1650610920171" duration="4498000" />
+      <workItem from="1650762598300" duration="7828000" />
+      <workItem from="1650780486976" duration="8177000" />
+      <workItem from="1650846382063" duration="7972000" />
+      <workItem from="1650866695699" duration="2797000" />
+      <workItem from="1650933209728" duration="13930000" />
+      <workItem from="1651020564414" duration="11640000" />
+      <workItem from="1651106307225" duration="1199000" />
+      <workItem from="1651207167173" duration="755000" />
+      <workItem from="1651711478447" duration="2649000" />
+      <workItem from="1651798038440" duration="1092000" />
+      <workItem from="1651805521702" duration="3923000" />
+      <workItem from="1651884455613" duration="4773000" />
+      <workItem from="1652057021386" duration="19303000" />
+      <workItem from="1652150420240" duration="1687000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="0" y="0" key="#Project_Structure" timestamp="1650266666136">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="0" y="0" key="#Project_Structure/0.0.1536.816@0.0.1536.816" timestamp="1650266666136" />
+    <state x="379" y="69" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1652166635907">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="379" y="69" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.816@0.0.1536.816" timestamp="1652166635907" />
+    <state x="500" y="110" key="#com.intellij.ide.util.MemberChooser" timestamp="1652061634018">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="500" y="110" key="#com.intellij.ide.util.MemberChooser/0.0.1536.816@0.0.1536.816" timestamp="1652061634018" />
+    <state x="517" y="187" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1650937025365">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="517" y="187" key="#com.intellij.ide.util.PackageChooserDialog/0.0.1536.816@0.0.1536.816" timestamp="1650937025365" />
+    <state x="652" y="411" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1652084037415">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="652" y="411" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1536.816@0.0.1536.816" timestamp="1652084037415" />
+    <state x="460" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1650941772053">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="460" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.816@0.0.1536.816" timestamp="1650941772053" />
+    <state width="841" height="466" key="DebuggerActiveHint" timestamp="1652083190969">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="841" height="466" key="DebuggerActiveHint/0.0.1536.816@0.0.1536.816" timestamp="1652083190969" />
+    <state x="566" y="166" key="FileChooserDialogImpl" timestamp="1652166909080">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="566" y="166" key="FileChooserDialogImpl/0.0.1536.816@0.0.1536.816" timestamp="1652166909080" />
+    <state width="1493" height="207" key="GridCell.Tab.0.bottom" timestamp="1652166981583">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="1493" height="207" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1652166981583" />
+    <state width="1493" height="207" key="GridCell.Tab.0.center" timestamp="1652166981583">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="1493" height="207" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1652166981583" />
+    <state width="1493" height="207" key="GridCell.Tab.0.left" timestamp="1652166981583">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="1493" height="207" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1652166981583" />
+    <state width="1493" height="207" key="GridCell.Tab.0.right" timestamp="1652166981583">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="1493" height="207" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1652166981583" />
+    <state width="1493" height="156" key="GridCell.Tab.1.bottom" timestamp="1652086498241">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="1493" height="156" key="GridCell.Tab.1.bottom/0.0.1536.816@0.0.1536.816" timestamp="1652086498241" />
+    <state width="1493" height="156" key="GridCell.Tab.1.center" timestamp="1652086498241">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="1493" height="156" key="GridCell.Tab.1.center/0.0.1536.816@0.0.1536.816" timestamp="1652086498241" />
+    <state width="1493" height="156" key="GridCell.Tab.1.left" timestamp="1652086498241">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="1493" height="156" key="GridCell.Tab.1.left/0.0.1536.816@0.0.1536.816" timestamp="1652086498241" />
+    <state width="1493" height="156" key="GridCell.Tab.1.right" timestamp="1652086498241">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="1493" height="156" key="GridCell.Tab.1.right/0.0.1536.816@0.0.1536.816" timestamp="1652086498241" />
+    <state width="1493" height="156" key="GridCell.Tab.2.bottom" timestamp="1652086498241">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="1493" height="156" key="GridCell.Tab.2.bottom/0.0.1536.816@0.0.1536.816" timestamp="1652086498241" />
+    <state width="1493" height="156" key="GridCell.Tab.2.center" timestamp="1652086498241">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="1493" height="156" key="GridCell.Tab.2.center/0.0.1536.816@0.0.1536.816" timestamp="1652086498241" />
+    <state width="1493" height="156" key="GridCell.Tab.2.left" timestamp="1652086498241">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="1493" height="156" key="GridCell.Tab.2.left/0.0.1536.816@0.0.1536.816" timestamp="1652086498241" />
+    <state width="1493" height="156" key="GridCell.Tab.2.right" timestamp="1652086498241">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="1493" height="156" key="GridCell.Tab.2.right/0.0.1536.816@0.0.1536.816" timestamp="1652086498241" />
+    <state width="284" height="477" key="HiddenNamespacesPopup" timestamp="1650787581762">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="284" height="477" key="HiddenNamespacesPopup/0.0.1536.816@0.0.1536.816" timestamp="1650787581762" />
+    <state x="349" y="143" key="IDE.errors.dialog" timestamp="1651028006706">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="349" y="143" key="IDE.errors.dialog/0.0.1536.816@0.0.1536.816" timestamp="1651028006706" />
+    <state x="281" y="54" key="Maven.ArtifactSearchDialog" timestamp="1652059767922">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="281" y="54" key="Maven.ArtifactSearchDialog/0.0.1536.816@0.0.1536.816" timestamp="1652059767922" />
+    <state x="249" y="68" key="SettingsEditor" timestamp="1650955423659">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="249" y="68" key="SettingsEditor/0.0.1536.816@0.0.1536.816" timestamp="1650955423659" />
+    <state x="468" y="140" width="664" height="536" key="find.popup" timestamp="1652085749162">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="468" y="140" width="664" height="536" key="find.popup/0.0.1536.816@0.0.1536.816" timestamp="1652085749162" />
+    <state x="232" y="100" key="new project wizard" timestamp="1652085321602">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="232" y="100" key="new project wizard/0.0.1536.816@0.0.1536.816" timestamp="1652085321602" />
+    <state x="470" y="164" key="refactoring.ChangeSignatureDialog" timestamp="1650942600544">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="470" y="164" key="refactoring.ChangeSignatureDialog/0.0.1536.816@0.0.1536.816" timestamp="1650942600544" />
+    <state x="425" y="186" key="run.anything.popup" timestamp="1650936298008">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="425" y="186" key="run.anything.popup/0.0.1536.816@0.0.1536.816" timestamp="1650936298008" />
+    <state x="554" y="137" width="672" height="678" key="search.everywhere.popup" timestamp="1650941027528">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="554" y="137" width="672" height="678" key="search.everywhere.popup/0.0.1536.816@0.0.1536.816" timestamp="1650941027528" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/xmairtravel_ordering$XmairTravelApplication.ic" NAME="XmairTravelApplication Coverage Results" MODIFIED="1650267921866" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.xmairtravel.api.*</FILTER>
+    </SUITE>
+  </component>
+</project>

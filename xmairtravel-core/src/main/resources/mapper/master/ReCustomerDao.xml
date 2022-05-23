@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xmairtravel.core.server.wechat.dao.master.ReCustomerDao">
+
+    <resultMap type="com.xmairtravel.core.server.wechat.entity.bo.ReCustomerBO" id="CustomerMap">
+        <result property="customerId" column="customer_id" jdbcType="INTEGER"/>
+        <result property="customerName" column="customer_name" jdbcType="VARCHAR"/>
+        <result property="phoneNum" column="phone_num" jdbcType="VARCHAR"/>
+        <result property="sex" column="sex" jdbcType="INTEGER"/>
+        <result property="openid" column="openid" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <resultMap type="com.xmairtravel.core.server.manager.entity.dto.ReCustomerDTO" id="CustomerWithBusinessNameMap">
+        <result property="customerId" column="customer_id" jdbcType="INTEGER"/>
+        <result property="customerName" column="customer_name" jdbcType="VARCHAR"/>
+        <result property="phoneNum" column="phone_num" jdbcType="VARCHAR"/>
+        <result property="businessName" column="businessName" jdbcType="VARCHAR"/>
+        <result property="sex" column="sex" jdbcType="INTEGER"/>
+        <result property="openid" column="openid" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="allcolumn">
+        customer_id,customer_name,phone_num,sex,openid
+    </sql>
+
+    <select id="selectWithBusinessName" resultMap="CustomerWithBusinessNameMap">
+        select rc_temp.customer_id,
+                ANY_VALUE(rc_temp.customer_name) customer_name,
+                ANY_VALUE(rc_temp.phone_num) phone_num,
+                ANY_VALUE(rc_temp.sex) sex,
+                ANY_VALUE(rc_temp.openid) openid,
+                ANY_VALUE(rc_temp.business_name) business_name
+                from (select rc.*,ANY_VALUE(rr.business_name) business_name from re_customer rc
+                left join re_reserve rr on rc.customer_id = rr.customer_id
+                order by ANY_VALUE(rr.create_time) desc) rc_temp
+                group by rc_temp.customer_id
+                <where>
+                    <if test="customerName != null and customerName != ''">
+                        <bind name="customerName" value="'%'+customerName+'%'"/>
+                        and rc_temp.customer_name like #{customerName}
+                    </if>
+                    <if test="phoneNumber != null and phoneNumber != ''">
+                        and rc_temp.phoneNumber = #{phoneNumber}
+                    </if>
+                </where>
+    </select>
+
+
+</mapper>
+

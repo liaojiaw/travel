@@ -1,0 +1,8 @@
+server:
+  port: 9200
+
+spring:
+  application:
+   name: xmaritravel-manager-api
+  profiles:
+    active: pro

@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xmairtravel.core.server.wechat.dao.master.ReReserveDao">
+
+    <resultMap type="com.xmairtravel.core.server.wechat.entity.bo.ReReserveBO" id="ReReserveMap">
+        <result property="reserveId" column="reserve_id" jdbcType="INTEGER"/>
+        <result property="reserveStartTime" column="reserve_start_time" jdbcType="INTEGER"/>
+        <result property="reserveEndTime" column="reserve_end_time" jdbcType="INTEGER"/>
+        <result property="status" column="status" jdbcType="INTEGER"/>
+        <result property="openid" column="openid" jdbcType="VARCHAR"/>
+        <result property="userId" column="user_id" jdbcType="INTEGER"/>
+        <result property="createTime" column="create_time" jdbcType="INTEGER"/>
+        <result property="updateTime" column="update_time" jdbcType="INTEGER"/>
+        <result property="departure" column="departure" jdbcType="VARCHAR"/>
+        <result property="destination" column="destination" jdbcType="VARCHAR"/>
+        <result property="departureCoordinate" column="departure_coordinate" jdbcType="VARCHAR"/>
+        <result property="destinationCoordinate" column="destination_coordinate" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <!--查询单个-->
+    <select id="queryById" resultMap="ReReserveMap">
+        select
+          reserve_id, reserve_start_time, reserve_end_time, status, openid, user_id, create_time, update_time, departure, destination, departure_coordinate, destination_coordinate
+        from re_reserve
+        where reserve_id = #{reserveId}
+    </select>
+
+    <!--查询指定行数据-->
+    <select id="queryAllByLimit" resultMap="ReReserveMap">
+        select
+          reserve_id, reserve_start_time, reserve_end_time, status, openid, user_id, create_time, update_time, departure, destination, departure_coordinate, destination_coordinate
+        from re_reserve
+        <where>
+            <if test="reserveId != null">
+                and reserve_id = #{reserveId}
+            </if>
+            <if test="reserveStartTime != null">
+                and reserve_start_time = #{reserveStartTime}
+            </if>
+            <if test="reserveEndTime != null">
+                and reserve_end_time = #{reserveEndTime}
+            </if>
+            <if test="status != null">
+                and status = #{status}
+            </if>
+            <if test="openid != null and openid != ''">
+                and openid = #{openid}
+            </if>
+            <if test="userId != null">
+                and user_id = #{userId}
+            </if>
+            <if test="createTime != null">
+                and create_time = #{createTime}
+            </if>
+            <if test="updateTime != null">
+                and update_time = #{updateTime}
+            </if>
+            <if test="departure != null and departure != ''">
+                and departure = #{departure}
+            </if>
+            <if test="destination != null and destination != ''">
+                and destination = #{destination}
+            </if>
+            <if test="departureCoordinate != null and departureCoordinate != ''">
+                and departure_coordinate = #{departureCoordinate}
+            </if>
+            <if test="destinationCoordinate != null and destinationCoordinate != ''">
+                and destination_coordinate = #{destinationCoordinate}
+            </if>
+        </where>
+        limit #{pageable.offset}, #{pageable.pageSize}
+    </select>
+
+    <!--统计总行数-->
+    <select id="count" resultType="java.lang.Long">
+        select count(1)
+        from re_reserve
+        <where>
+            <if test="reserveId != null">
+                and reserve_id = #{reserveId}
+            </if>
+            <if test="reserveStartTime != null">
+                and reserve_start_time = #{reserveStartTime}
+            </if>
+            <if test="reserveEndTime != null">
+                and reserve_end_time = #{reserveEndTime}
+            </if>
+            <if test="status != null">
+                and status = #{status}
+            </if>
+            <if test="openid != null and openid != ''">
+                and openid = #{openid}
+            </if>
+            <if test="userId != null">
+                and user_id = #{userId}
+            </if>
+            <if test="createTime != null">
+                and create_time = #{createTime}
+            </if>
+            <if test="updateTime != null">
+                and update_time = #{updateTime}
+            </if>
+            <if test="departure != null and departure != ''">
+                and departure = #{departure}
+            </if>
+            <if test="destination != null and destination != ''">
+                and destination = #{destination}
+            </if>
+            <if test="departureCoordinate != null and departureCoordinate != ''">
+                and departure_coordinate = #{departureCoordinate}
+            </if>
+            <if test="destinationCoordinate != null and destinationCoordinate != ''">
+                and destination_coordinate = #{destinationCoordinate}
+            </if>
+        </where>
+    </select>
+
+    <!--新增所有列-->
+    <insert id="insert" keyProperty="reserveId" useGeneratedKeys="true">
+        insert into re_reserve(reserve_start_time, reserve_end_time, status, openid, user_id, create_time, update_time, departure, destination, departure_coordinate, destination_coordinate)
+        values (#{reserveStartTime}, #{reserveEndTime}, #{status}, #{openid}, #{userId}, #{createTime}, #{updateTime}, #{departure}, #{destination}, #{departureCoordinate}, #{destinationCoordinate})
+    </insert>
+
+    <insert id="insertBatch" keyProperty="reserveId" useGeneratedKeys="true">
+        insert into re_reserve(reserve_start_time, reserve_end_time, status, openid, user_id, create_time, update_time, departure, destination, departure_coordinate, destination_coordinate)
+        values
+        <foreach collection="entities" item="entity" separator=",">
+        (#{entity.reserveStartTime}, #{entity.reserveEndTime}, #{entity.status}, #{entity.openid}, #{entity.userId}, #{entity.createTime}, #{entity.updateTime}, #{entity.departure}, #{entity.destination}, #{entity.departureCoordinate}, #{entity.destinationCoordinate})
+        </foreach>
+    </insert>
+
+    <insert id="insertOrUpdateBatch" keyProperty="reserveId" useGeneratedKeys="true">
+        insert into re_reserve(reserve_start_time, reserve_end_time, status, openid, user_id, create_time, update_time, departure, destination, departure_coordinate, destination_coordinate)
+        values
+        <foreach collection="entities" item="entity" separator=",">
+            (#{entity.reserveStartTime}, #{entity.reserveEndTime}, #{entity.status}, #{entity.openid}, #{entity.userId}, #{entity.createTime}, #{entity.updateTime}, #{entity.departure}, #{entity.destination}, #{entity.departureCoordinate}, #{entity.destinationCoordinate})
+        </foreach>
+        on duplicate key update
+        reserve_start_time = values(reserve_start_time),
+        reserve_end_time = values(reserve_end_time),
+        status = values(status),
+        openid = values(openid),
+        user_id = values(user_id),
+        create_time = values(create_time),
+        update_time = values(update_time),
+        departure = values(departure),
+        destination = values(destination),
+        departure_coordinate = values(departure_coordinate),
+        destination_coordinate = values(destination_coordinate)
+    </insert>
+
+    <!--通过主键修改数据-->
+    <update id="update">
+        update re_reserve
+        <set>
+            <if test="reserveStartTime != null">
+                reserve_start_time = #{reserveStartTime},
+            </if>
+            <if test="reserveEndTime != null">
+                reserve_end_time = #{reserveEndTime},
+            </if>
+            <if test="status != null">
+                status = #{status},
+            </if>
+            <if test="openid != null and openid != ''">
+                openid = #{openid},
+            </if>
+            <if test="userId != null">
+                user_id = #{userId},
+            </if>
+            <if test="createTime != null">
+                create_time = #{createTime},
+            </if>
+            <if test="updateTime != null">
+                update_time = #{updateTime},
+            </if>
+            <if test="departure != null and departure != ''">
+                departure = #{departure},
+            </if>
+            <if test="destination != null and destination != ''">
+                destination = #{destination},
+            </if>
+            <if test="departureCoordinate != null and departureCoordinate != ''">
+                departure_coordinate = #{departureCoordinate},
+            </if>
+            <if test="destinationCoordinate != null and destinationCoordinate != ''">
+                destination_coordinate = #{destinationCoordinate},
+            </if>
+        </set>
+        where reserve_id = #{reserveId}
+    </update>
+
+    <!--通过主键删除-->
+    <delete id="deleteById">
+        delete from re_reserve where reserve_id = #{reserveId}
+    </delete>
+
+</mapper>
+

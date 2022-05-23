@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xmairtravel.core.server.wechat.dao.master.ReShuttleBusDao">
+
+    <resultMap type="com.xmairtravel.core.server.wechat.entity.bo.ReShuttleBusBO" id="ReShuttleBusMap">
+        <result property="plateNumber" column="plate_number" jdbcType="VARCHAR"/>
+        <result property="bodyColor" column="body_color" jdbcType="VARCHAR"/>
+        <result property="seats" column="seats" jdbcType="INTEGER"/>
+        <result property="brand" column="brand" jdbcType="VARCHAR"/>
+        <result property="status" column="status" jdbcType="INTEGER"/>
+        <result property="driverId" column="driver_id" jdbcType="INTEGER"/>
+        <result property="shuttleBusId" column="shuttle_bus_id" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <!--查询单个-->
+    <select id="queryById" resultMap="ReShuttleBusMap">
+        select
+          plate_number, body_color, seats, brand, status, driver_id, shuttle_bus_id
+        from re_shuttle_bus
+        where shuttle_bus_id = #{shuttleBusId}
+    </select>
+
+    <!--查询指定行数据-->
+    <select id="queryAllByLimit" resultMap="ReShuttleBusMap">
+        select
+          plate_number, body_color, seats, brand, status, driver_id, shuttle_bus_id
+        from re_shuttle_bus
+        <where>
+            <if test="plateNumber != null and plateNumber != ''">
+                and plate_number = #{plateNumber}
+            </if>
+            <if test="bodyColor != null and bodyColor != ''">
+                and body_color = #{bodyColor}
+            </if>
+            <if test="seats != null">
+                and seats = #{seats}
+            </if>
+            <if test="brand != null and brand != ''">
+                and brand = #{brand}
+            </if>
+            <if test="status != null">
+                and status = #{status}
+            </if>
+            <if test="driverId != null">
+                and driver_id = #{driverId}
+            </if>
+            <if test="shuttleBusId != null">
+                and shuttle_bus_id = #{shuttleBusId}
+            </if>
+        </where>
+        limit #{pageable.offset}, #{pageable.pageSize}
+    </select>
+
+    <!--统计总行数-->
+    <select id="count" resultType="java.lang.Long">
+        select count(1)
+        from re_shuttle_bus
+        <where>
+            <if test="plateNumber != null and plateNumber != ''">
+                and plate_number = #{plateNumber}
+            </if>
+            <if test="bodyColor != null and bodyColor != ''">
+                and body_color = #{bodyColor}
+            </if>
+            <if test="seats != null">
+                and seats = #{seats}
+            </if>
+            <if test="brand != null and brand != ''">
+                and brand = #{brand}
+            </if>
+            <if test="status != null">
+                and status = #{status}
+            </if>
+            <if test="driverId != null">
+                and driver_id = #{driverId}
+            </if>
+            <if test="shuttleBusId != null">
+                and shuttle_bus_id = #{shuttleBusId}
+            </if>
+        </where>
+    </select>
+
+    <!--新增所有列-->
+    <insert id="insert" keyProperty="shuttleBusId" useGeneratedKeys="true">
+        insert into re_shuttle_bus(plate_number, body_color, seats, brand, status, driver_id)
+        values (#{plateNumber}, #{bodyColor}, #{seats}, #{brand}, #{status}, #{driverId})
+    </insert>
+
+    <insert id="insertBatch" keyProperty="shuttleBusId" useGeneratedKeys="true">
+        insert into re_shuttle_bus(plate_number, body_color, seats, brand, status, driver_id)
+        values
+        <foreach collection="entities" item="entity" separator=",">
+        (#{entity.plateNumber}, #{entity.bodyColor}, #{entity.seats}, #{entity.brand}, #{entity.status}, #{entity.driverId})
+        </foreach>
+    </insert>
+
+    <insert id="insertOrUpdateBatch" keyProperty="shuttleBusId" useGeneratedKeys="true">
+        insert into re_shuttle_bus(plate_number, body_color, seats, brand, status, driver_id)
+        values
+        <foreach collection="entities" item="entity" separator=",">
+            (#{entity.plateNumber}, #{entity.bodyColor}, #{entity.seats}, #{entity.brand}, #{entity.status}, #{entity.driverId})
+        </foreach>
+        on duplicate key update
+        plate_number = values(plate_number),
+        body_color = values(body_color),
+        seats = values(seats),
+        brand = values(brand),
+        status = values(status),
+        driver_id = values(driver_id)
+    </insert>
+
+    <!--通过主键修改数据-->
+    <update id="update">
+        update re_shuttle_bus
+        <set>
+            <if test="plateNumber != null and plateNumber != ''">
+                plate_number = #{plateNumber},
+            </if>
+            <if test="bodyColor != null and bodyColor != ''">
+                body_color = #{bodyColor},
+            </if>
+            <if test="seats != null">
+                seats = #{seats},
+            </if>
+            <if test="brand != null and brand != ''">
+                brand = #{brand},
+            </if>
+            <if test="status != null">
+                status = #{status},
+            </if>
+            <if test="driverId != null">
+                driver_id = #{driverId},
+            </if>
+        </set>
+        where shuttle_bus_id = #{shuttleBusId}
+    </update>
+
+    <!--通过主键删除-->
+    <delete id="deleteById">
+        delete from re_shuttle_bus where shuttle_bus_id = #{shuttleBusId}
+    </delete>
+
+</mapper>
+

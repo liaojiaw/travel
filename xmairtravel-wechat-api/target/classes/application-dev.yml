@@ -1,0 +1,37 @@
+## master 数据源配置
+master:
+  datasource:
+    url: jdbc:mysql://localhost:3306/xmairtravel_reserve?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    username: root
+    password: root
+    driverClassName: com.mysql.cj.jdbc.Driver
+
+  ## slave 数据源配置
+slave:
+  datasource:
+    url: jdbc:mysql://localhost:3306/xmairtravel_reserve?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    username: root
+    password: root
+    driverClassName: com.mysql.cj.jdbc.Driver
+
+#热部署
+spring:
+  http:
+    encoding:
+      force: true
+      charset: UTF-8
+  devtools:
+    restart:
+      enabled: true
+
+token:
+  # 加密密钥
+  secret: iwqjhda8232bjgh432
+  # token有效时长
+  expire: 3600
+
+
+wx:
+  appid: wx690beb152e635c0b
+  appsecret: 4b5e8008b2474f2432055ebdc2460802
+  openid: o9JP40K2b4iaF0ylB_rv-H1LF_sU
